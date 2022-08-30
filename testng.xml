@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Test Suite"  >
+
+    <parameter name="browser" value="chrome"/>
+
+    <test name="All tests">
+        <classes>
+            <class name="pageObjectTests.LoginTest">
+                <methods>
+                    <exclude name="loginToAccount"/>
+                    <include name="logInToAccount_wrongPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
